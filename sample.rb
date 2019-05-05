@@ -40,7 +40,7 @@ class Janken
       puts "相手の手は#{jankens[enemy_hand]}です。あなたの負けです。"
       @new_game = true
     else
-      puts "0〜2の数字を入力してください。"
+      puts "あいこです。もう一度手を選んでください"
       player = Player.new
       enemy = Enemy.new
       janken = Janken.new
