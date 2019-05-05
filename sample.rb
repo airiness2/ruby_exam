@@ -39,8 +39,16 @@ class Janken
     elsif kekka == 1
       puts "相手の手は#{jankens[enemy_hand]}です。あなたの負けです。"
       @new_game = true
-    else
+    elsif kekka == 0
       puts "あいこです。もう一度手を選んでください"
+      player = Player.new
+      enemy = Enemy.new
+      janken = Janken.new
+      
+      janken.pon(player.hand, enemy.hand)
+    else
+      puts "0〜2の数字を入力してください。"
+
       player = Player.new
       enemy = Enemy.new
       janken = Janken.new
