@@ -9,8 +9,9 @@ class Player
     puts "2:  パー"
     
     loop do
-      player_hand = gets.to_i
-      return player_hand if player_hand == 0 || player_hand == 1 || player_hand == 2
+      input = gets.chomp
+      player_hand = input.to_i
+      return player_hand if input == "0" || input == "1" || input == "2"
       puts "0〜2の数字を入力してください。"
     end
   end
